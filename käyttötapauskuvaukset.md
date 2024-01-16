@@ -11,7 +11,7 @@
 3. Käyttäjä syöttää kirjautumistiedot
 4. Kirjautuminen onnistuu ja käyttäjä pääsee sovellukseen / kirjautuminen epäonnistuu
 - Poikkeuksellinen toiminta:
-3a. Tapahtuu kirjautumisvirhe
+>3a. Tapahtuu kirjautumisvirhe
 
 **Äänestyksen ylläpito**
 - Käyttötapauksen nimi: Äänestyksen ylläpito
@@ -23,7 +23,7 @@
 1. Ylläpitäjä menee sovellukseen
 2. Ylläpitäjä valitsee joko äänestyksen lisäämisen tai poistamisen
 - Poikkeuksellinen toiminta:
-2a. Äänestyksen poistaminen tai lisääminen ei onnistu
+>2a. Äänestyksen poistaminen tai lisääminen ei onnistu
 
 **Äänestystulosten katsominen**
 - Käyttötapauksen nimi: Äänestystulosten katsominen
@@ -35,7 +35,7 @@
 1. Käyttäjä on sovelluksessa
 2. Käyttäjä katselee sovelluksen etusivulla näkyviä äänestystuloksiaepäonnistuu
 - Poikkeuksellinen toiminta:
-2a. Ylläpitäjä poistaa juuri tarkkailtavaa äänestystä
+>2a. Ylläpitäjä poistaa juuri tarkkailtavaa äänestystä
 
 **Äänestäminen**
 - Käyttötapauksen nimi: Äänestäminen
@@ -46,4 +46,5 @@
 - Käyttötapauksen kulku:
 1. Käyttäjä on sovelluksessa
 2. Käyttäjä osallistuu äänestykseen äänestämällä
-2a. Ylläpitäjä poistaa juuri äänestettävää äänestystä
+- Poikkeuksellinen toiminta:
+>2a. Ylläpitäjä poistaa juuri äänestettävää äänestystä
