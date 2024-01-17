@@ -1,4 +1,4 @@
-# Use-Case--projektit #662 ja #663
+# Use-Case--projektit 662 ja 663
 (#662 Use Case -kaavion piirtäminen & #663 Ohjelmiston toteutus UseCase-kaavion pohjalta)
 
 #662 Use Case -kaavion piirtäminen
@@ -23,5 +23,7 @@ Käyttötapauksen kulku
 Poikkeuksellinen toiminta
 Käytä samaa GitHub-repositoryä.
 Kun käyttötapauskuvaukset on valmiit, toteuta niiden pohjalta käyttöliittymät HTML/CSS-koodilla. Voit halutessasi käyttää myös Bootstrap-kirjastoa. Sovelluksen täytyy olla toimiva prototyyppi, eli käyttöliittymän täytyy toimia. Ulkoisia tietovarastoja ei tarvitse käyttää.
+----
+https://saturosvall.github.io/Use-Case--projekti/
 
 
