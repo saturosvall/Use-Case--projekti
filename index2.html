@@ -3,8 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
     <title>Joukkuekysely</title>
+    <style>
+        body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px;
+    
+}
+h1 {
+    text-align: center;
+}
+.poll-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    
+}
+
+.poll-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.poll-question {
+    margin-bottom: 10px;
+}
+
+.poll-options {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.option button {
+    padding: 8px 12px;
+    margin-top: 5px;
+    background-color: #b3b5bd;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+    width: 100px;
+}
+
+.bar {
+    width: 50px;
+    background-color: #000827;
+    margin-top: 5px;
+}
+
+.results {
+    margin-top: 10px;
+}
+
+.logout-link {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    color: #3498db;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .poll-table {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
     
 </head>
 <body>
