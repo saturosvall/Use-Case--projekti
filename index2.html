@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Joukkuekysely</title>
+    
+</head>
+<body>
+
+    <h1>JOUKKUEKYSELY</h1>
+    <!-- KYSELYTABLE -->
+    <div class="poll-table">
+        <div class="poll-container" id="poll1">
+            <div class="poll-question">1. Haluatko, että toisella harjoituskerralla pelataan?</div>
+
+            <div class="poll-options">
+                <div class="option">
+                    <button onclick="vote('Yes', 1)">Kyllä</button>
+                    <div class="bar" id="barYes1"></div>
+                </div>
+                <div class="option">
+                    <button onclick="vote('No', 1)">En</button>
+                    <div class="bar" id="barNo1"></div>
+                </div>
+            </div>
+
+            <div class="results" id="results1">Kyllä: <span id="resultYes1">0</span> En: <span id="resultNo1">0</span></div>
+        </div>
+
+        <div class="poll-container" id="poll2">
+            <div class="poll-question">2. Torstaina Toivio vai Kirkonkylä?</div>
+
+            <div class="poll-options">
+                <div class="option">
+                    <button onclick="vote('Yes', 2)">Toivio</button>
+                    <div class="bar" id="barYes2"></div>
+                </div>
+                <div class="option">
+                    <button onclick="vote('No', 2)">Kirkonkylä</button>
+                    <div class="bar" id="barNo2"></div>
+                </div>
+            </div>
+
+            <div class="results" id="results2">Toivio: <span id="resultYes2">0</span> Kirkonkylä: <span id="resultNo2">0</span></div>
+        </div>
+
+        <div class="poll-container" id="poll3">
+            <div class="poll-question">3. Haluatko osallistua talkoisiin?</div>
+
+            <div class="poll-options">
+                <div class="option">
+                    <button onclick="vote('Yes', 3)">Kyllä</button>
+                    <div class="bar" id="barYes3"></div>
+                </div>
+                <div class="option">
+                    <button onclick="vote('No', 3)">En</button>
+                    <div class="bar" id="barNo3"></div>
+                </div>
+            </div>
+
+            <div class="results" id="results3">Kyllä: <span id="resultYes3">0</span> En: <span id="resultNo3">0</span></div>
+        </div>
+
+        <div class="poll-container" id="poll4">
+            <div class="poll-question">4. Haluatko olla maalivahti?</div>
+
+            <div class="poll-options">
+                <div class="option">
+                    <button onclick="vote('Yes', 4)">Kyllä</button>
+                    <div class="bar" id="barYes4"></div>
+                </div>
+                <div class="option">
+                    <button onclick="vote('No', 4)">En</button>
+                    <div class="bar" id="barNo4"></div>
+                </div>
+            </div>
+
+            <div class="results" id="results4">Kyllä: <span id="resultYes4">0</span> En: <span id="resultNo4">0</span></div>
+        </div>
+
+        <div class="poll-container" id="poll5">
+            <div class="poll-question">5. Haluatko olla hyökkääjä?</div>
+
+            <div class="poll-options">
+                <div class="option">
+                    <button onclick="vote('Yes', 5)">Kyllä</button>
+                    <div class="bar" id="barYes5"></div>
+                </div>
+                <div class="option">
+                    <button onclick="vote('No', 5)">En</button>
+                    <div class="bar" id="barNo5"></div>
+                </div>
+            </div>
+
+            <div class="results" id="results5">Kyllä: <span id="resultYes5">0</span> En: <span id="resultNo5">0</span></div>
+        </div>
+
+        <div class="poll-container" id="poll6">
+            <div class="poll-question">Haluatko olla puolustaja?</div>
+
+            <div class="poll-options">
+                <div class="option">
+                    <button onclick="vote('Yes', 6)">Kyllä</button>
+                    <div class="bar" id="barYes6"></div>
+                </div>
+                <div class="option">
+                    <button onclick="vote('No', 6)">En</button>
+                    <div class="bar" id="barNo6"></div>
+                </div>
+            </div>
+
+            <div class="results" id="results6">Kyllä: <span id="resultYes6">0</span> En: <span id="resultNo6">0</span></div>
+        </div>
+    </div>
+    <a href="index.html" class="logout-link">Kirjaudu ulos</a>
+
+    <!-- Kyselyn äänestystoiminnot -->
+    <script>
+        function vote(choice, questionNumber) {
+            updateResults(choice, questionNumber);
+        }
+
+        function updateResults(choice, questionNumber) {
+            const resultYes = document.getElementById(`resultYes${questionNumber}`);
+            const resultNo = document.getElementById(`resultNo${questionNumber}`);
+            const barYes = document.getElementById(`barYes${questionNumber}`);
+            const barNo = document.getElementById(`barNo${questionNumber}`);
+
+            if (choice === 'Yes') {
+                resultYes.innerText = parseInt(resultYes.innerText) + 1;
+                updateBar(barYes, resultYes.innerText);
+            } else {
+                resultNo.innerText = parseInt(resultNo.innerText) + 1;
+                updateBar(barNo, resultNo.innerText);
+            }
+        }
+
+        function updateBar(barElement, value) {
+            barElement.style.height = `${value * 10}px`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirjautuminen joukkuekyselyyn</title>
+    <style>
+        body {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 20px;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .login-form label {
+            font-weight: bold;
+        }
+
+        .login-form input {
+            padding: 8px;
+        }
+
+        .login-form button {
+            padding: 10px;
+            background-color: black;
+            color: #fff;
+            cursor: pointer;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h3>Kirjaudu sisään joukkuekyselyyn</h3>
+        <div class="login-form">
+            <label for="username">Käyttäjänimi:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Salasana:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button onclick="login()">Kirjaudu sisään</button>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === "pirkat" && password === "joukkuekysely") {
+                alert("Terveuloa kyselyyn!");
+                window.location.href = "index2.html"; 
+            } else {
+                alert("Väärä käyttäjätunnus tai salasana, kokeile uudestaan!");
+            }
+        }
+    </script>
+</body>
+</html>
